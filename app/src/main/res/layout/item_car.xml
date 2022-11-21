@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:backgroundTint="@color/black"
+    app:cardCornerRadius="5dp"
+    app:cardMaxElevation="2dp"
+    app:strokeColor="@color/white"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvId"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:text="ID: x"
+            android:textAlignment="inherit"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/imgCarro"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvMarcaId"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:text="ID Fabricante: x"
+            android:textAlignment="inherit"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/imgCarro"
+            app:layout_constraintStart_toEndOf="@id/tvId"
+            app:layout_constraintTop_toTopOf="@id/tvId"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvCadastro"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:text="Cadastro: 0123456789"
+            android:textAlignment="inherit"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/imgCarro"
+            app:layout_constraintStart_toEndOf="@id/tvMarcaId"
+            app:layout_constraintTop_toTopOf="@id/tvId"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imgCarro"
+            android:layout_width="0dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/img_carro"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvId" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvAno"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="XXXX"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/imgCarro"
+            app:layout_constraintTop_toBottomOf="@+id/imgCarro" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvMarcaNome"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:text="Fabricante"
+            android:textAlignment="inherit"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/tvAno"
+            app:layout_constraintTop_toBottomOf="@+id/imgCarro" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvModeloNome"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:text="Modelo"
+            android:textAlignment="inherit"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/tvMarcaNome"
+            app:layout_constraintTop_toBottomOf="@+id/imgCarro" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvCor"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Cor"
+            android:textAlignment="inherit"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/tvAno"
+            app:layout_constraintTop_toBottomOf="@+id/tvAno" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvNumPortas"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="6dp"
+            android:text="X portas"
+            android:textAlignment="inherit"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/tvCor"
+            app:layout_constraintTop_toBottomOf="@+id/tvAno" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvCombustivel"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="6dp"
+            android:text="Combustivel: x"
+            android:textAlignment="inherit"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/tvNumPortas"
+            app:layout_constraintTop_toBottomOf="@+id/tvAno" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvFipe"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Valor FIPE: XX"
+            android:textAlignment="inherit"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/tvCor"
+            app:layout_constraintTop_toBottomOf="@+id/tvCor" />
+
+        <Button
+            android:id="@+id/btnEuQuero"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:text="Eu quero"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFipe" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
